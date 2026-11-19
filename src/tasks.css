@@ -1,0 +1,14 @@
+.hardware-board{height:175px;border:1px solid #719083;background:#21473f;position:relative;overflow:hidden;box-shadow:inset 0 0 0 8px #193b35;margin:14px 0}
+.hardware-board:before{content:"";position:absolute;inset:18px;border:2px solid #4b7964;background:repeating-linear-gradient(0deg,transparent 0 20px,#356455 20px 22px)}
+.component{position:absolute;z-index:2;background:#31454c;color:#f1e8cb;border:3px solid #a6bfaf;box-shadow:3px 4px 0 #142b30;font-weight:700;letter-spacing:.06em;font-size:.7rem}
+.component:hover,.component.selected{border-color:#f4cc73;background:#625b43}
+.component:disabled{opacity:.68}
+.component.cpu{width:57px;height:57px;left:20%;top:26%}
+.component.ram{width:93px;height:28px;left:52%;top:25%;background:#567b5b}
+.component.monitor{width:86px;height:41px;left:53%;top:57%}
+.board-trace{position:absolute;z-index:1;background:#d7b96e;height:4px}.board-trace.one{width:28%;left:30%;top:70%}.board-trace.two{width:22%;left:38%;top:42%}
+.task-submit{margin-top:15px}.primary-button:disabled{opacity:.45;box-shadow:none;transform:none;cursor:not-allowed}
+.process-table>div{grid-template-columns:minmax(0,1fr) 38px 70px}.process-table>div button{padding:5px 3px;border:1px solid #8dad9c;background:#2f5048;color:#e7f3e7;font-size:.62rem;font-weight:700}.process-table>div button:hover{background:#43715f}.process-table>div button:disabled{opacity:.45;cursor:not-allowed}
+.db-tables button{width:100%;border:1px solid #64847e;background:#2b4b4c;color:#f2f4e7;margin-top:7px;padding:7px;text-align:left;font-size:.77rem;font-weight:700}.db-tables button small{font-size:.63rem;font-weight:400;color:#b9d0c4;margin-top:3px}.db-tables button:hover,.db-tables button.selected{border-color:#f0ca80;background:#3c6056}.db-tables button:disabled{opacity:.65;cursor:not-allowed}.relation-preview{border:1px dashed #819e91;color:#d6e6d3;padding:10px;margin-top:11px;text-align:center;font-size:.72rem;line-height:1.5}.relation-preview span{color:#efc16f;font-weight:700;padding:0 4px}
+@media(max-width:640px){.component.cpu{left:15%}.component.ram{left:50%}.component.monitor{left:53%}.process-table>div{grid-template-columns:minmax(0,1fr) 32px 65px}}
+.station.hardware .station-name,.station.os .station-name,.station.database .station-name{top:auto;bottom:100%}
