@@ -1,4 +1,5 @@
-﻿@import '@fontsource/chakra-petch/latin-400.css';
+﻿@import '@fontsource/press-start-2p/latin-400.css';
+@import '@fontsource/chakra-petch/latin-400.css';
 @import '@fontsource/chakra-petch/latin-500.css';
 @import '@fontsource/chakra-petch/latin-600.css';
 @import '@fontsource/chakra-petch/latin-700.css';
@@ -17,3 +18,28 @@
 @media(max-width:1040px){.main-layout{grid-template-columns:1fr;gap:14px}.side-column{min-height:0}.map-frame{max-width:900px}.how-to{margin-top:25px}.topbar-note{display:none}}
 @media(max-width:640px){.app-shell{padding:0 14px}.topbar{height:54px}.topbar-status{display:none}.main-layout{padding-top:20px}.headline{align-items:flex-start}.headline h1{font-size:1.85rem}.headline p{font-size:.8rem}.level-tag{display:none}.hud-item{padding:9px 8px}.hud-label{font-size:.51rem}.hud strong{font-size:1.15rem}.map-topline,.map-bottomline{font-size:.49rem;padding:0 7px;min-height:25px}.map-bottomline span:last-child{display:none}.station-name{font-size:.6rem;max-width:100px;white-space:normal;text-align:center}.station-object{border-width:1px}.overlay{inset:25px 0}.overlay-card{padding:16px}.overlay-card h2{font-size:1.3rem}.overlay-card p{font-size:.72rem}.interaction-tip{font-size:.6rem}.side-column{padding:17px}.mobile-controls{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:3px 0 20px}.dpad{display:flex;flex-direction:column;align-items:center;gap:3px}.dpad>div{display:flex;gap:3px}.dpad button,.interact-button{min-width:43px;min-height:38px;border:1px solid #76938a;background:#213b43;color:#eaf4e9;font-size:.75rem}.interact-button{background:#edc474;color:#14242b;border-color:#edc474;padding:0 18px;font-weight:700}.footer{font-size:.52rem}.footer span:last-child{display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+:root{--arcade-bg:#0c1720;--arcade-panel:#193039;--arcade-green:#285145;--arcade-amber:#efc271;--arcade-success:#9cdeb0;--arcade-text:#e9f3ef}
+.station{border:0;background:transparent;color:inherit;padding:0;text-align:center;cursor:pointer}
+.station:focus-visible .station-object{outline:3px solid var(--arcade-amber);outline-offset:3px}
+.station:disabled{cursor:default}
+.station.papeis,.station.computador{z-index:4}
+.station.armario .station-object{background:#987950}
+.station.papeis .station-object{background:#8d7452}
+.station.computador .station-object{background:#3d6266}
+.document-search{display:block;margin:18px 0;color:#e9f3ef;font-size:.82rem}
+.document-search input{display:block;width:100%;margin-top:7px;background:#0f2730;border:1px solid #8cafaa;color:#e9f3ef;padding:11px;font:inherit}
+.document-article{border:1px solid #567474;background:#203941;padding:12px;margin:8px 0;font-size:.82rem;line-height:1.55}
+.document-article summary{cursor:pointer;font-weight:700;color:#efc271}
+.document-article p{margin:10px 0 0;color:#dcebe1}
+@media(max-width:640px){.station-name{font-size:.56rem}.dpad button{touch-action:none;min-height:44px;min-width:44px}}
+.station.papeis .station-name{top:-26px;left:4%;transform:none}
+.station.computador .station-name{top:100%;left:55%;transform:none}
+@media(max-width:640px){.station.papeis .station-name{top:-31px;left:-20%}.station.computador .station-name{left:0}}
+.mobile-stations{display:none}
+@media(max-width:640px){.station-name{display:none}.mobile-stations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:10px}.mobile-stations button{background:#1d3940;border:1px solid #75998c;color:#e9f3ef;text-align:left;padding:8px;min-height:44px;font-size:.72rem}.mobile-stations button:focus-visible{outline:3px solid #efc271;outline-offset:2px}}
+
+.brand,.headline h1,.side-heading h2,.overlay-card h2,.workbench-header h2{font-family:'Press Start 2P','Chakra Petch',sans-serif;letter-spacing:-.02em;line-height:1.5}
+.brand{font-size:.78rem}.headline h1{font-size:clamp(1.15rem,2.1vw,1.75rem);line-height:1.55}.side-heading h2{font-size:.84rem;line-height:1.6}.overlay-card h2{font-size:1.05rem}.workbench-header h2{font-size:clamp(1rem,1.8vw,1.45rem);line-height:1.55}
+@media(max-width:640px){.headline h1{font-size:1.05rem}.workbench-header h2{font-size:.84rem}.overlay-card h2{font-size:.85rem}}
+.hud strong:not(.hud-word){font-family:'Press Start 2P','Chakra Petch',sans-serif;font-size:1rem;line-height:1.65}
+@media(max-width:640px){.hud strong:not(.hud-word){font-size:.78rem}}

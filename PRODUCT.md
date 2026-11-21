@@ -1,7 +1,7 @@
-# Produto
+﻿# Produto
 
-**Oficina de TI** é um MVP escolar para alunos de técnico em informática. O objetivo é praticar conceitos de hardware, sistemas operacionais e banco de dados por meio de chamados curtos, com deslocamento e pressão de tempo inspirados no ritmo de jogos cooperativos de cozinha. A partida é individual e dura até cinco minutos.
+**Oficina de TI** é um jogo escolar individual para estudantes de técnico em informática. A partida não tem limite de tempo nem punição por tentativas. O progresso fica somente no navegador.
 
-O jogador deve pegar cada chamado no balcão, investigar o problema na bancada correspondente e entregar a solução. O jogo mostra a consequência de cada decisão e oferece dica após um erro. O sucesso do MVP é permitir completar os três chamados e explicar o conceito praticado em cada um.
+Há oito chamados: seis diagnósticos de hardware em sequência, um de sistema operacional e um de banco de dados. O jogador pega o chamado no balcão, investiga na estação, confirma o reparo por nova partida da máquina quando for hardware, e entrega a solução. Na bancada, aciona diretamente os controles da máquina e observa as pistas da partida. Peças e cabos de reposição ficam no armário, sem custo ou limite. Os papéis aparecem como folhas paginadas. O computador oferece desktop escolar com arquivos, registros e pesquisa local. Uma ação separada abre pesquisa externa no DuckDuckGo e envia o termo somente após o clique.
 
-O escopo atual é uma sala, três chamados e uma fase. Não há conta, placar online nem conteúdo gerado por usuários. A publicação prevista é uma página estática; o destino ainda depende de um repositório GitHub identificado.
+O jogo é um site estático de uma sala e uma fase. Não há conta nem placar online. O progresso fica no navegador; a pesquisa externa opcional envia o termo digitado ao DuckDuckGo quando acionada. Os ambientes de hardware são fictícios para aprendizagem. As próximas fases podem ampliar os desafios de sistema operacional e banco de dados.

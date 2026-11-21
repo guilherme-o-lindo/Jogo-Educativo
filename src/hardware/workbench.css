@@ -1,0 +1,116 @@
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.workbench-backdrop{position:fixed;inset:0;z-index:100;background:#09151a;overflow:auto;padding:18px}
+.workbench{max-width:1700px;min-height:calc(100vh - 36px);margin:auto;border:1px solid #5c7f79;background:#132831;box-shadow:0 24px 70px rgba(0,0,0,.45);display:flex;flex-direction:column}
+.workbench-header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;padding:22px 28px 19px;border-bottom:1px solid #52716f;background:#1a3439}
+.workbench-kicker,.bench-section-title,.case-goal span{color:#efc77c;font-size:.72rem;font-weight:700;letter-spacing:.09em}
+.workbench-header h2{font-size:clamp(1.5rem,2.7vw,2.5rem);line-height:1.1;letter-spacing:-.025em;margin:7px 0 6px;color:#f3f4e9}
+.workbench-header p{margin:0;color:#b9d1c8;font-size:.91rem}
+.workbench-close{border:1px solid #75938b;background:#243e43;color:#eaf2e9;padding:9px 12px;display:flex;align-items:center;gap:20px;font-size:.83rem;font-weight:700}
+.workbench-close span{font-size:1.25rem;line-height:1}.workbench-close:hover{background:#36585a}
+.workbench-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;flex:1;min-height:0}
+.workbench-main{min-width:0;padding:19px 22px 15px;display:flex;flex-direction:column;gap:12px}
+.workbench-toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;color:#edc57c;font-size:.77rem;font-weight:700;letter-spacing:.04em}
+.workbench-toolbar small{display:block;color:#9fbcb4;font-size:.72rem;font-weight:400;letter-spacing:0;margin-top:3px}
+.mobile-toolbelt{display:none}
+.mobile-toolbelt .mobile-utility{width:100%;margin-top:6px}
+.zoom-controls{display:flex;align-items:center;border:1px solid #61817a;flex:none}.zoom-controls button{width:33px;height:33px;border:0;background:#294b4e;color:#eef3e9;font-size:1.1rem}.zoom-controls button:hover:not(:disabled){background:#3e6a60}.zoom-controls button:disabled{opacity:.4}.zoom-controls output{min-width:52px;text-align:center;font-size:.75rem;color:#f0d18f;font-variant-numeric:tabular-nums}
+.workbench-viewport{width:100%;overflow:auto;border:1px solid #6d8c82;background:#162b32;scrollbar-color:#708f82 #193138;scrollbar-width:thin}
+.workbench-scene{position:relative;aspect-ratio:14/7;min-height:490px}
+.board-art{display:block;width:100%;height:100%;image-rendering:pixelated}.diagram-label{font:700 18px 'Chakra Petch',sans-serif;fill:#f2deb0;letter-spacing:1px}.tiny-label{font:700 14px 'Chakra Petch',sans-serif;fill:#d6e7d5;letter-spacing:1px}.screen-label{font:700 17px 'Chakra Petch',sans-serif;fill:#b4d7cb;letter-spacing:1px}
+.board-hotspot{position:absolute;width:32px;height:32px;transform:translate(-50%,-50%);border:2px solid #102b31;display:grid;place-items:center;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.5);z-index:2}
+.board-hotspot:after{content:"";width:9px;height:9px;background:#173238;border-radius:50%}.board-hotspot.slot{background:#e9be71}.board-hotspot.connector{background:#93d3b7}.board-hotspot.inspect{background:#8dabb5}.board-hotspot:hover{outline:3px solid #fff0b6;outline-offset:2px;z-index:3}
+.workbench-legend{display:flex;flex-wrap:wrap;gap:16px;color:#bad1c6;font-size:.72rem}.workbench-legend span{display:flex;align-items:center;gap:6px}.workbench-legend i{width:11px;height:11px;border-radius:50%;display:inline-block}.legend-slot{background:#e9be71}.legend-connector{background:#93d3b7}.legend-inspect{background:#8dabb5}
+.workbench-disclaimer{margin:0;color:#9fb9b1;font-size:.76rem;line-height:1.5}
+.workbench-sidebar{min-width:0;max-height:calc(100vh - 130px);overflow-y:auto;border-left:1px solid #52716f;padding:20px;background:#172e35;scrollbar-color:#708f82 #193138;scrollbar-width:thin}
+.case-goal{padding:12px 14px;background:#254039;border:1px solid #638777}.case-goal p{margin:6px 0 0;font-size:.86rem;line-height:1.5;color:#e5f0e3}
+.bench-controls,.bench-inspector,.bench-inventory,.bench-journal{border-bottom:1px solid #46625e;padding:18px 0}
+.bench-switch{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;color:#d8e6dc;font-size:.78rem}.bench-switch button,.bench-buttons button,.bench-footer button,.mini-action{border:1px solid #789a8a;background:#2a4c45;color:#e9f3e6;padding:8px 10px;font-size:.76rem;font-weight:700}.bench-switch button:hover,.bench-buttons button:hover,.bench-footer button:hover,.mini-action:hover{background:#3c6959}.bench-switch button:disabled,.bench-buttons button:disabled,.bench-inventory button:disabled{opacity:.45;cursor:not-allowed}
+.bench-buttons{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}.bench-buttons button:last-child{grid-column:1/-1;background:#4d473c;border-color:#9d8b66}.bench-buttons button:last-child:hover{background:#675b46}.control-hint{color:#9fb8ad;font-size:.7rem;line-height:1.4;margin:8px 0 0}
+.test-result{padding:12px;border:1px solid #c39266;background:#493d33;margin-top:12px}.test-result.boot_ok{border-color:#8fca9f;background:#244739}.test-result strong{font-size:.69rem;letter-spacing:.07em;color:#f2cf94}.test-result.boot_ok strong{color:#bce6be}.test-result p{margin:7px 0 0;color:#f1e5d5;line-height:1.45;font-size:.8rem}
+.case-ready{padding:12px;border:1px solid #80c397;background:#285342;margin-top:10px;color:#ddf3e2}.case-ready strong{font-size:.85rem}.case-ready p{font-size:.75rem;margin:5px 0 0}
+.bench-inspector strong{display:block;margin:8px 0 4px;font-size:.93rem;color:#f5e5c1}.bench-inspector p{margin:5px 0;color:#c1d6cb;line-height:1.45;font-size:.79rem}.bench-inspector small{display:block;color:#9fb7ad;font-size:.72rem;line-height:1.4;margin-top:8px}.mini-action{margin-top:8px}
+.bench-selected-item{margin-top:14px;padding:10px;background:#35463e;border:1px solid #9e936c}
+.bench-inventory>p{color:#a5c0b5;font-size:.76rem;line-height:1.4}.bench-inventory>button,.cable-row>button:first-child{display:block;width:100%;text-align:left;margin-top:7px;padding:9px 10px;border:1px solid #5d8078;background:#24413f;color:#e6f1e4;font-size:.78rem}.bench-inventory>button:hover,.cable-row>button:first-child:hover{background:#33594f}.bench-inventory button.chosen{border-color:#f0cd85;background:#514e3c;color:#ffe5ac}
+.cable-row{display:flex;gap:5px}.cable-row>button:first-child{flex:1}.cable-row small{float:right;color:#bfddc5}.disconnect-button{width:31px;margin-top:7px;border:1px solid #8b7861;background:#493f37;color:#f4d8b8;font-size:1.15rem}.disconnect-button:hover{background:#655044}
+.bench-journal ol{padding-left:20px;margin:10px 0 0;display:flex;flex-direction:column-reverse;gap:8px}.bench-journal li{color:#bdd1c5;font-size:.75rem;line-height:1.4}.bench-journal li::marker{color:#f0c87c}.bench-footer{display:flex;gap:8px;padding-top:18px}.bench-footer button{flex:1}
+@media(max-width:1050px){.workbench-layout{grid-template-columns:1fr}.workbench-sidebar{max-height:none;border-left:0;border-top:1px solid #52716f}.workbench-scene{min-height:0}.workbench-backdrop{padding:0}.workbench{min-height:100vh}}
+@media(max-width:620px){.workbench-header{padding:16px;gap:9px}.workbench-header h2{font-size:1.5rem}.workbench-header p{font-size:.78rem}.workbench-close{font-size:0;padding:9px}.workbench-close span{font-size:1.2rem}.workbench-main{padding:12px}.workbench-toolbar{align-items:flex-start;font-size:.72rem}.workbench-toolbar small{max-width:190px;font-size:.67rem}.workbench-sidebar{padding:15px}.board-hotspot{width:36px;height:36px}.workbench-disclaimer{font-size:.72rem}.mobile-toolbelt{display:block;padding:9px;border:1px solid #698779;background:#203d3c}.mobile-toolbelt label{display:block;color:#efc77c;font-size:.68rem;font-weight:700;letter-spacing:.06em}.mobile-toolbelt select{display:block;width:100%;margin-top:5px;padding:9px;border:1px solid #86a495;background:#182f35;color:#ecf3e8;font:inherit;font-size:.82rem}.mobile-toolbelt>div{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:8px}.mobile-toolbelt button{min-height:37px;padding:4px;border:1px solid #89a89a;background:#2c514a;color:#f0f5e9;font-size:.67rem;font-weight:700}.mobile-toolbelt button:disabled{opacity:.42}}
+.workbench-sidebar details{display:block}
+.workbench-sidebar summary{cursor:pointer;list-style:square;margin-bottom:8px}
+.workbench-sidebar details:not([open]){padding-bottom:12px}
+.workbench-sidebar label{display:block;color:#dcebe1;font-size:.75rem;margin:8px 0}
+.workbench-sidebar input,.workbench-sidebar select{width:100%;min-height:40px;display:block;background:#112a31;border:1px solid #80a99a;color:#e9f3ef;padding:6px;font:inherit;margin-top:4px}
+.workbench-sidebar button:focus-visible,.workbench-sidebar summary:focus-visible{outline:3px solid #efc271;outline-offset:3px}
+@media(max-width:620px){.workbench-sidebar button{min-height:44px}}
+.cable-art{cursor:pointer}.cable-shadow{fill:none;stroke:#10242b;stroke-width:12;stroke-linecap:round;pointer-events:none}.cable-wire{fill:none;stroke:#81b9ac;stroke-width:6;stroke-linecap:round;pointer-events:none}.cable-hit{fill:none;stroke:transparent;stroke-width:20;pointer-events:stroke}.cable-art.active .cable-wire{stroke:#f1d293;stroke-width:8}.cable-art.broken .cable-wire{stroke:#e9907d;stroke-dasharray:13 7}.cable-art.tense:not(.broken) .cable-wire{stroke:#e4ba78}.cable-art:hover .cable-wire{stroke-width:9}
+.connector-mark{pointer-events:none}.connector-mark rect{fill:#183137;stroke:#b5c6ac;stroke-width:2}.connector-mark circle{fill:#c8d3b5}.connector-mark text{font:700 10px 'Chakra Petch',sans-serif;letter-spacing:.03em;fill:#e5edda;paint-order:stroke;stroke:#183038;stroke-width:3px}
+.board-art{position:relative}.workbench-scene{background:#183038}.workbench-scene:after{content:"";position:absolute;left:17%;right:16%;bottom:0;height:18%;border-top:2px solid #48615a;background:rgba(11,27,30,.26);pointer-events:none}
+.cable-hit-art,.cable-visible-art{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.cable-hit-art{z-index:2;pointer-events:none}
+.cable-hit-art .cable-hit{pointer-events:stroke}
+.cable-visible-art{z-index:6;pointer-events:none}
+.cable-tag{position:absolute;left:50%;top:31px;transform:translateX(-50%);padding:2px 4px;background:#102c31;color:#e7f2e8;border:1px solid #698b7e;font:700 10px 'Chakra Petch',sans-serif;white-space:nowrap;line-height:1;pointer-events:none}.cable-end.loose .cable-tag{background:#315047}.cable-end.broken .cable-tag{background:#683d38}
+.board-hotspot.slot.compatible{background:rgba(156,222,176,.3)!important;outline:2px solid #9cdeb0;outline-offset:2px}.board-hotspot.slot.installed{outline:1px solid #a9c8ad}
+.workbench-legend{color:#cde0d1}.workbench-sidebar{background:#1b3236}.workbench-sidebar .bench-inventory{background:#213b3b;padding:14px 10px;margin:8px -10px;border:1px solid #456c61}.workbench-sidebar .cable-row>button:first-child{min-height:44px}
+.loose-part{position:absolute;z-index:5;transform:translate(-50%,-50%);cursor:grab}
+.loose-part:focus-visible{outline:3px solid #efc271;outline-offset:3px}
+.workbench-scene{touch-action:pan-x pan-y}.object-target,.board-hotspot,.cable-end,.loose-part{touch-action:none;user-select:none}
+.object-target{position:absolute;z-index:1;transform:translate(-50%,-50%);border:0;background:transparent;cursor:grab}.object-target.motherboard{width:53%;height:69%}.object-target.psu{width:14%;height:34%}.object-target.ssd{width:15%;height:17%}.object-target.monitor{width:18%;height:29%}.object-target:focus-visible{outline:4px solid #efc271;outline-offset:2px}.object-target:active{cursor:grabbing}
+.board-hotspot{width:44px;height:44px;border:0;border-radius:0;background:transparent!important;box-shadow:none;cursor:pointer}.board-hotspot:after{display:none}.board-hotspot.slot{width:58px;height:45px}.board-hotspot.installed{cursor:grab}.board-hotspot:hover{outline:3px solid #efc271;outline-offset:2px;background:rgba(239,194,113,.15)!important}
+.cable-end{position:absolute;z-index:4;width:42px;height:42px;transform:translate(-50%,-50%);border:0;background:transparent;cursor:grab;display:grid;place-items:center}.cable-end:after{content:"";width:20px;height:14px;border:2px solid #183038;border-radius:2px;background:#9cdeb0;box-shadow:0 0 0 1px #d6edd7}.cable-end.loose:after{background:#efc271}.cable-end:focus-visible{outline:3px solid #efc271;outline-offset:3px}
+.workbench-main button:focus-visible{outline:3px solid #efc271;outline-offset:3px}
+.pan-controls{display:none}@media(max-width:620px){.pan-controls{display:flex;gap:8px}.pan-controls button{flex:1;min-height:44px;border:1px solid #89a89a;background:#2c514a;color:#f0f5e9;font:inherit;font-size:.75rem;font-weight:700}}
+.region-controls{display:flex;gap:6px;flex-wrap:wrap}
+.region-controls button{min-height:44px;padding:8px 12px;border:1px solid #6d9484;background:#25423e;color:#e9f3ef;font:inherit;font-size:.75rem;font-weight:700}
+.region-controls button:hover{background:#385c4d}
+.move-preview{border:1px solid #d3ad65;background:#4e4434;color:#fff1c9;padding:9px 12px;font-size:.78rem;line-height:1.4}
+.spot-feedback{position:absolute;z-index:10;max-width:min(280px,35%);padding:8px 10px;border:1px solid #efc271;background:#423d31;color:#fff0cc;font-size:.72rem;line-height:1.35;pointer-events:none;box-shadow:0 5px 18px rgba(0,0,0,.45)}
+.board-hotspot.connector.compatible{background:rgba(156,222,176,.28)!important;outline:2px solid #9cdeb0;outline-offset:2px}
+.board-hotspot.connector.next{background:rgba(239,194,113,.35)!important;outline:4px solid #efc271;outline-offset:2px}
+.workbench-main button:focus-visible,.region-controls button:focus-visible{outline:3px solid #efc271;outline-offset:3px}
+@media(max-width:620px){.region-controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.region-controls button{padding:6px 3px;font-size:.65rem}.workbench-scene{min-width:980px}.zoom-controls button{width:44px;height:44px}.workbench-close{min-width:44px;min-height:44px}.loose-part{min-height:44px}}
+.cable-end{z-index:9;width:44px;height:44px}.cable-end:after{width:23px;height:15px}.cable-end.loose:after{background:#a8c8b9}.cable-end.broken:after{background:#e9907d}
+.loose-part:hover{outline:2px solid #efc271;outline-offset:2px}
+.part-sprite{display:block;width:100%;height:100%;overflow:visible;pointer-events:none;image-rendering:pixelated}
+.part-sprite text{fill:#f2deb0;font:700 12px 'Chakra Petch',sans-serif;paint-order:stroke;stroke:#183038;stroke-width:2px}
+.installed-part{position:absolute;z-index:4;transform:translate(-50%,-50%);padding:0;border:0;background:transparent;cursor:grab;touch-action:none;user-select:none}
+.installed-part:hover{outline:3px solid #efc271;outline-offset:2px}
+.installed-part.dimm_a2,.installed-part.dimm_b2{min-width:0}
+.installed-part.dimm_a2:before,.installed-part.dimm_b2:before{content:"";position:absolute;inset:0 -17px}
+.installed-part:active,.part-tray button:active{cursor:grabbing}
+.object-target.motherboard{width:42.4%;height:72%;cursor:help}.object-target.psu{width:12.6%}.object-target.ssd{width:12.6%}.object-target.monitor{width:14.9%}
+.loose-part{display:block;width:72px;height:72px;min-width:0;min-height:0;max-width:none;padding:0;border:0;border-radius:0;background:transparent;color:inherit;touch-action:none}
+.loose-part:is(.ram_good,.ram_faulty){width:150px;height:24px}
+.loose-part.gpu{width:168px;height:40px}
+.loose-part:is(.ssd_sata_good,.ssd_sata_faulty){width:100px;height:70px}
+.loose-part.ssd_m2{width:116px;height:42px}
+.part-tray{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;max-height:260px;overflow:auto;scrollbar-color:#8aad9b #193138;scrollbar-width:thin;padding:8px;margin-top:8px;border:1px solid #638777;background:#142d32}
+.part-tray button{display:flex;align-items:center;gap:8px;min-width:0;min-height:68px;padding:4px;border:1px solid #6c9384;background:#25453f;color:#edf3e6;font:600 .72rem 'Chakra Petch',sans-serif;text-align:left;cursor:grab;touch-action:none}
+.part-tray button .part-sprite{width:110px;height:52px;flex:none}
+.part-tray button span{overflow-wrap:anywhere}
+.part-tray button:hover,.part-tray button.chosen,.part-tray button:focus-visible{border-color:#efc271;outline:2px solid #efc271;outline-offset:1px}
+.dragged-part{position:fixed;z-index:200;width:72px;height:72px;transform:translate(-50%,-50%);pointer-events:none;filter:drop-shadow(5px 8px 5px rgba(0,0,0,.55))}
+.dragged-part:is(.ram_good,.ram_faulty){width:150px;height:24px}
+.dragged-part.gpu{width:168px;height:40px}
+.dragged-part:is(.ssd_sata_good,.ssd_sata_faulty){width:100px;height:70px}
+.dragged-part.ssd_m2{width:116px;height:42px}
+@media(max-width:620px){.loose-part{min-height:44px}}
+.scene-highlights{position:absolute;inset:0;z-index:9;pointer-events:none}
+.physical-control{position:absolute;z-index:8;transform:translate(-50%,-50%);width:44px;height:44px;display:grid;place-items:center;border:3px solid #c3d6c4;border-radius:5px;background:#25363a;color:#f2deb0;font:700 16px 'Chakra Petch',sans-serif;box-shadow:0 3px 0 #122429;cursor:pointer}
+.physical-control:hover{border-color:#efc271;background:#41514a}.physical-control.on{background:#315b49;color:#e7ffe6;border-color:#95d5ab}.physical-control:disabled{cursor:default}.physical-control:focus-visible{outline:3px solid #efc271;outline-offset:3px}
+.voltage-control{width:52px;font-size:12px}
+.screwdriver-tool{position:absolute;z-index:10;transform:translate(-50%,-50%);width:100px;min-height:66px;border:2px solid #c7af79;border-radius:5px;background:#34504c;color:#f5e6be;display:grid;place-items:center;cursor:grab;touch-action:none;font:700 10px 'Chakra Petch',sans-serif}.screwdriver-tool span{font-size:28px;line-height:1}.screwdriver-tool small{font:inherit}.screwdriver-tool.selected,.screwdriver-tool:hover{outline:3px solid #efc271;outline-offset:2px}.screwdriver-tool:active{cursor:grabbing}
+.scene-highlight{position:absolute;transform:translate(-50%,-50%);outline:3px solid #efc271;outline-offset:2px;pointer-events:none}
+.scene-highlight.hotspot{width:44px;height:44px}.scene-highlight.empty-slot{width:58px;height:45px}
+.scene-highlight.object.motherboard{width:42.4%;height:72%}.scene-highlight.object.psu{width:12.6%;height:34%}.scene-highlight.object.ssd{width:12.6%;height:17%}.scene-highlight.object.monitor{width:14.9%;height:29%}
+.scene-highlight.loose{width:72px;height:72px}.scene-highlight.loose:is(.ram_good,.ram_faulty){width:150px;height:24px}.scene-highlight.loose.gpu{width:168px;height:40px}.scene-highlight.loose:is(.ssd_sata_good,.ssd_sata_faulty){width:100px;height:70px}.scene-highlight.loose.ssd_m2{width:116px;height:42px}
+.dragged-part.highlighted{outline:3px solid #efc271;outline-offset:2px}
+.workbench-scene button:focus-visible{outline:none}
+.bench-status{display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid #6a8d7b;background:#6a8d7b}
+.bench-status>div{min-width:0;display:flex;align-items:baseline;gap:12px;padding:11px 14px;background:#203a3c;color:#e7f0e7;font-size:.78rem;line-height:1.4}
+.bench-status strong{flex:none;color:#efc271;font-size:.68rem;letter-spacing:.08em}.bench-status span{min-width:0}.bench-status small{color:#b8d6c7}
+.inspection-card{position:fixed;left:12px;top:12px;z-index:160;visibility:hidden;width:min(280px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;padding:13px 14px;border:2px solid #d4b879;background:#1d363a;color:#e9f3e9;box-shadow:5px 7px 0 #102529,0 14px 28px rgba(0,0,0,.42);font-size:.78rem;line-height:1.4}
+.inspection-card.placed{visibility:visible}.inspection-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;color:#efc271;font-size:.67rem;font-weight:700;letter-spacing:.08em}.inspection-card-head button{width:44px;height:44px;border:1px solid #789a8a;background:#2a4c45;color:#e9f3e6;font:700 20px 'Chakra Petch',sans-serif;cursor:pointer}
+.inspection-card>strong{display:block;color:#f4e0ac;font-size:.98rem}.inspection-card p{margin:7px 0;color:#e3eee5}.inspection-card small{display:block;margin-top:6px;color:#bad3c7}.inspection-card .mini-action{display:inline-block;min-height:44px;margin:10px 6px 0 0;cursor:pointer}
+.inspection-card button:focus-visible{outline:3px solid #efc271;outline-offset:2px}
+@media(max-width:620px){.bench-status{grid-template-columns:1fr}.bench-status>div{padding:10px 12px}}
